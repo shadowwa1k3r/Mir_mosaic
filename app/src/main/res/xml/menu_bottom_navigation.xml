@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id = "@+id/product_list"
+        android:icon = "@drawable/item1"
+        android:title = "@string/item1_title" />
+    <item
+        android:id = "@+id/qr_scanner"
+        android:icon = "@drawable/item2"
+        android:title = "@string/item2_title" />
+    <item
+        android:id = "@+id/calculator"
+        android:icon = "@drawable/item3"
+        android:title = "@string/item3_title" />
+    <item
+        android:id = "@+id/user"
+        android:icon = "@drawable/item4"
+        android:title = "@string/item4_title" />
+    <item
+        android:id = "@+id/about"
+        android:icon = "@drawable/item5"
+        android:title = "@string/item5_title" />
+
+
+
+</menu>
