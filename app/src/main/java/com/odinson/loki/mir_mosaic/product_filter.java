@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 
 public class product_filter extends Fragment {
 
+    public static final String Title = "Product Filter";
+    public static product_filter newInstance(){
+        return new product_filter();
+    }
     public product_filter() {
         // Required empty public constructor
     }

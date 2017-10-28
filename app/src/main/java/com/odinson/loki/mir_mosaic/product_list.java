@@ -60,12 +60,11 @@ public class product_list extends Fragment {
     }
     private void setupViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFragment(new collections(),"Collections");
-        adapter.addFragment(new product_filter(),"Product Filter");
+
         viewPager.setAdapter(adapter);
 
     }
-    class ViewPagerAdapter extends FragmentPagerAdapter {
+    /*class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> FragmentList = new ArrayList<>();
         private final List<String> FragmentTitleList = new ArrayList<>();
 
@@ -92,7 +91,7 @@ public class product_list extends Fragment {
         public CharSequence getPageTitle(int position) {
             return FragmentTitleList.get(position);
         }
-    }
+    }*/
 
 
 
