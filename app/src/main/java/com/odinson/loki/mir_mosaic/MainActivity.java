@@ -7,13 +7,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TabHost;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +26,8 @@ public class MainActivity extends AppCompatActivity{
        USER,
        ABOUT
    }
+
+    Toolbar tb;
 
     private BottomNavigationView.OnNavigationItemSelectedListener OnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,11 +59,11 @@ public class MainActivity extends AppCompatActivity{
     private void ChangeFragment(NavigationFragment value){
         Fragment fragment = null;
         switch (value) {
-            case PRODUCT_LIST:    fragment = new product_list(); break;
-            case QR_SCANNER: fragment = new qr_scanner(); break;
-            case CALCULATOR: fragment= new calculator();break;
-            case USER: fragment= new user();break;
-            case ABOUT: fragment= new about();break;
+            case PRODUCT_LIST:    fragment = new product_list();tb.setTitle(R.string.item1_title);  break;
+            case QR_SCANNER: fragment = new qr_scanner();tb.setTitle(R.string.item2_title);break;
+            case CALCULATOR: fragment= new calculator();tb.setTitle(R.string.item3_title);break;
+            case USER: fragment= new user();tb.setTitle(R.string.item4_title);break;
+            case ABOUT: fragment= new about();tb.setTitle(R.string.item5_title);break;
         }
         if(fragment!=null)
             getSupportFragmentManager()
@@ -75,9 +76,19 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gallery);
+       // tite = (TextView)findViewById(R.id.tite);
+        tb=(Toolbar)findViewById(R.id.toolbar_actionbar);
+       // tb.setLogo(R.drawable.app_ico);
+
+
+
+
+
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottomnavigation);
         navigation.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.calculator);
+        setSupportActionBar(tb);
 
 
 

@@ -7,6 +7,27 @@
     android:id="@+id/container"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_actionbar"
+    android:layout_width="match_parent"
+
+    android:layout_height="?android:actionBarSize"
+    android:background="@color/colorPrimary">
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>!-->
+    </android.support.v7.widget.Toolbar>
+
+
    <FrameLayout
        android:id="@+id/content"
        android:layout_width="match_parent"
