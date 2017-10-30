@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity{
     private void ChangeFragment(NavigationFragment value){
         Fragment fragment = null;
         switch (value) {
-            case PRODUCT_LIST:    fragment = new product_list();tb.setTitle(R.string.item1_title);  break;
+            case PRODUCT_LIST:    fragment = new ItemList();tb.setTitle(R.string.item1_title);  break;
             case QR_SCANNER: fragment = new qr_scanner();tb.setTitle(R.string.item2_title);break;
             case CALCULATOR: fragment= new calculator();tb.setTitle(R.string.item3_title);break;
             case USER: fragment= new user();tb.setTitle(R.string.item4_title);break;
