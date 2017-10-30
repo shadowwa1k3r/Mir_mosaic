@@ -57,7 +57,7 @@ public class product_list extends Fragment {
     }
     private void setupViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new Collections(),"Collections");
+        adapter.addFragment(new Collection(),"Collections");
         adapter.addFragment(new Filter(),"Filter");
 
         viewPager.setAdapter(adapter);
