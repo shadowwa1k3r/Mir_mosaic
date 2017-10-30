@@ -76,9 +76,9 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gallery);
-       // tite = (TextView)findViewById(R.id.tite);
+
         tb=(Toolbar)findViewById(R.id.toolbar_actionbar);
-       // tb.setLogo(R.drawable.app_ico);
+
 
 
 

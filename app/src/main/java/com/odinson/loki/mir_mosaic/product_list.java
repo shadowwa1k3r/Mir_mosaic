@@ -23,7 +23,7 @@ public class product_list extends Fragment {
 
 
 
-    private Toolbar toolbar;
+
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -47,10 +47,7 @@ public class product_list extends Fragment {
                              Bundle savedInstanceState) {
 
         View plist = inflater.inflate(R.layout.fragment_product_list,container,false);
-        // Inflate the layout for this fragment
-       // toolbar = (Toolbar) plist.findViewById(R.id.toolbar);
-       // ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        //((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         viewPager = (ViewPager)plist.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         tabLayout = (TabLayout)plist.findViewById(R.id.tabs);
@@ -59,12 +56,14 @@ public class product_list extends Fragment {
         return plist;
     }
     private void setupViewPager(ViewPager viewPager){
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        adapter.addFragment(new Collections(),"Collections");
+        adapter.addFragment(new Filter(),"Filter");
 
         viewPager.setAdapter(adapter);
 
     }
-    /*class ViewPagerAdapter extends FragmentPagerAdapter {
+    class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> FragmentList = new ArrayList<>();
         private final List<String> FragmentTitleList = new ArrayList<>();
 
@@ -91,7 +90,7 @@ public class product_list extends Fragment {
         public CharSequence getPageTitle(int position) {
             return FragmentTitleList.get(position);
         }
-    }*/
+    }
 
 
 
