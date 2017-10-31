@@ -6,6 +6,18 @@
     <string name="item4_title">User</string>
     <string name="item5_title">About</string>
     <string name="section_format">Hello %1$d</string>
+    <string-array name="titles">
+        <item>Natural</item>
+        <item>Skalini</item>
+        <item>Alma</item>
+        <item>Closeouts</item>
+    </string-array>
+    <string-array name="banner">
+        <item>@drawable/album1</item>
+        <item>@drawable/album2</item>
+        <item>@drawable/album3</item>
+        <item>@drawable/album4</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

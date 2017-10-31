@@ -27,19 +27,9 @@ public class product_list extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-
-    public product_list() {
-        // Required empty public constructor
-    }
-
-
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
+    public static product_list newInstance(){
+        product_list itemOnFragment = new product_list();
+        return itemOnFragment;
     }
 
     @Override
@@ -56,18 +46,18 @@ public class product_list extends Fragment {
         return plist;
     }
     private void setupViewPager(ViewPager viewPager){
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFragment(new Collection(),"Collections");
+        Adapter adapter = new Adapter(getChildFragmentManager());
+        adapter.addFragment(new ItemList(),"Collections");
         adapter.addFragment(new Filter(),"Filter");
 
         viewPager.setAdapter(adapter);
 
     }
-    class ViewPagerAdapter extends FragmentPagerAdapter {
+    class Adapter extends FragmentPagerAdapter {
         private final List<Fragment> FragmentList = new ArrayList<>();
         private final List<String> FragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+        public Adapter(FragmentManager manager) {
             super(manager);
         }
 

@@ -18,51 +18,78 @@ import java.util.List;
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-    private String[] mDataset;
+    //Member variables
+    private ArrayList<itemtype> mMosaicData;
+    private Context mContext;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView mTextView;
-        public ViewHolder(TextView v) {
-            super(v);
-            mTextView = v;
-        }
+    RecyclerAdapter(Context context, ArrayList<itemtype> mosaicData) {
+        this.mMosaicData = mosaicData;
+        this.mContext = context;
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public RecyclerAdapter(String[] myDataset) {
-        mDataset = myDataset;
-    }
 
-    // Create new views (invoked by the layout manager)
+    /**
+     * Required method for creating the viewholder objects.
+     * @param parent The ViewGroup into which the new View will be added after it is bound to an adapter position.
+     * @param viewType The view type of the new View.
+     * @return The newly create ViewHolder.
+     */
     @Override
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                   int viewType) {
-        // create a new view
-        TextView v = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout., parent, false);
-        // set the view's size, margins, paddings and layout parameters
-        ...
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+    public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item, parent, false));
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    /**
+     * Required method that binds the data to the viewholder.
+     * @param holder The viewholder into which the data should be put.
+     * @param position The adapter position.
+     */
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset[position]);
-
+    public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
+        //Get current sport
+        itemtype currentMosaic = mMosaicData.get(position);
+        //Populate the textviews with data
+        Glide.with(mContext).load(currentMosaic.getThumbnail()).into(holder.banner);
+        holder.bindTo(currentMosaic);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+
+    /**
+     * Required method for determining the size of the data set.
+     * @return Size of the data set.
+     */
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mMosaicData.size();
     }
 
+
+    /**
+     * ViewHolder class that represents each row of data in the RecyclerView
+     */
+    class ViewHolder extends RecyclerView.ViewHolder {
+
+        //Member Variables for the TextViews
+        private TextView mTitleText;
+        private ImageView banner;
+
+        /**
+         * Constructor for the ViewHolder, used in onCreateViewHolder().
+         * @param itemView The rootview of the list_item.xml layout file
+         */
+        ViewHolder(View itemView) {
+            super(itemView);
+
+            //Initialize the views
+            mTitleText = (TextView)itemView.findViewById(R.id.title);
+            banner = (ImageView)itemView.findViewById(R.id.thumbnail);
+        }
+
+        void bindTo(itemtype currentMosaic){
+            //Populate the textviews with data
+            mTitleText.setText(currentMosaic.getName());
+            //mInfoText.setText(currentMosaic.getInfo());
+
+        }
+    }
 }

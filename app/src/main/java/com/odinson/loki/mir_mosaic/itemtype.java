@@ -19,9 +19,9 @@ public class itemtype {
         this.name=name;
     }
 
-    public void setThumbnail(int thumbnail) {
+    /*public void setThumbnail(int thumbnail) {
         this.thumbnail = thumbnail;
-    }
+    }*/
 
     public int getThumbnail() {
 
