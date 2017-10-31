@@ -18,6 +18,43 @@
         <item>@drawable/album3</item>
         <item>@drawable/album4</item>
     </string-array>
+    <string-array name="Natural">
+        <item>ALASKA</item>
+        <item>BALI</item>
+        <item>CASCADES</item>
+        <item>CERAMIQUE</item>
+        <item>CITYSCAPE</item>
+        <item>CLOUD 9</item>
+        <item>COLOR PALETTE</item>
+        <item>CRYSTAL SPRINGS</item>
+        <item>DC METRO</item>
+        <item>FIELD TILE</item>
+        <item>GALAXY</item>
+        <item>GEMS</item>
+        <item>HAWAII</item>
+        <item>ICELAND</item>
+        <item>INKA</item>
+        <item>JEWELS OF THE SEA</item>
+        <item>MARBELLA</item>
+        <item>MARMARA</item>
+        <item>METALLICO</item>
+        <item>MOLDINGS</item>
+        <item>MYKONOS</item>
+        <item>NETHERLANDS</item>
+        <item>SAVANNAH</item>
+        <item>SEATTLE</item>
+        <item>SHELL</item>
+        <item>SIERRA</item>
+        <item>TUSCANY</item>
+        <item>TUXEDO</item>
+        <item>VALENCIA</item>
+        <item>VERRE</item>
+        <item>VIENNA</item>
+
+    </string-array>
+    <string-array name="Skalini">
+
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

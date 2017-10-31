@@ -1,17 +1,21 @@
 package com.odinson.loki.mir_mosaic;
 
 import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.List;
+
+import static com.odinson.loki.mir_mosaic.R.layout.item;
 
 /**
  * Created by ergas on 10/28/2017.
@@ -36,7 +40,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
      */
     @Override
     public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item, parent, false));
+        return new ViewHolder(LayoutInflater.from(mContext).inflate(item, parent, false));
     }
 
     /**
@@ -45,12 +49,47 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
      * @param position The adapter position.
      */
     @Override
-    public void onBindViewHolder(RecyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerAdapter.ViewHolder holder, final int position) {
         //Get current sport
-        itemtype currentMosaic = mMosaicData.get(position);
-        //Populate the textviews with data
+        final itemtype currentMosaic = mMosaicData.get(position);
         Glide.with(mContext).load(currentMosaic.getThumbnail()).into(holder.banner);
         holder.bindTo(currentMosaic);
+        holder.cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String item = mMosaicData.get(position).getName();
+                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
+              AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                Categories categories  = new Categories();
+                if (item.equals("Natural"))
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+            }
+        });
+        holder.mTitleText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String item = mMosaicData.get(position).getName();
+                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
+                AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                Categories categories  = new Categories();
+                if (item.equals("Natural"))
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+            }
+        });
+        holder.banner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String item = mMosaicData.get(position).getName();
+                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
+                AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                Categories categories  = new Categories();
+                if (item.equals("Natural"))
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+            }
+        });
+
+        //Populate the textviews with data
+
     }
 
 
@@ -67,22 +106,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     /**
      * ViewHolder class that represents each row of data in the RecyclerView
      */
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder{
 
         //Member Variables for the TextViews
         private TextView mTitleText;
         private ImageView banner;
+        private CardView cv;
 
         /**
          * Constructor for the ViewHolder, used in onCreateViewHolder().
          * @param itemView The rootview of the list_item.xml layout file
          */
-        ViewHolder(View itemView) {
+        ViewHolder(final View itemView) {
             super(itemView);
+
+             cv = (CardView)itemView.findViewById(R.id.gcard_view);
+
 
             //Initialize the views
             mTitleText = (TextView)itemView.findViewById(R.id.title);
             banner = (ImageView)itemView.findViewById(R.id.thumbnail);
+
         }
 
         void bindTo(itemtype currentMosaic){
