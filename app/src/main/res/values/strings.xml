@@ -53,7 +53,37 @@
 
     </string-array>
     <string-array name="Skalini">
+        <item>ARTISTIC</item>
+        <item>PANTHEON</item>
+        <item>WATERJET</item>
+        <item>SPECIAL ORDER</item>
 
+    </string-array>
+    <string-array name="Alma">
+        <item>SOLID COLORS 0.6</item>
+        <item>SOLID COLORS 0.8 SANDY</item>
+        <item>SOLID COLORS 0.8 STELLA</item>
+        <item>SOLID COLORS 0.8 PEARLY</item>
+        <item>SOLID COLORS 0.8 FG</item>
+        <item>SOLID COLORS GM</item>
+        <item>STRIPES</item>
+        <item>ARTISTIC MURALS</item>
+        <item>BORDERS</item>
+        <item>DEGRADES 0.6</item>
+        <item>DEGRADES 0.8</item>
+        <item>GRADIENT COLOR COMPOSITIONS 0.6</item>
+        <item>MIX 0.6</item>
+        <item>MIX 0.6 AMBER</item>
+        <item>MIX 0.8</item>
+        <item>PATTERNS 0.6</item>
+        <item>PATTERNS 0.8</item>
+        <item>ALMA GLAMOUR</item>
+    </string-array>
+    <string-array name="Closeouts">
+        <item>ETHNIC FIRE DANCE</item>
+        <item>PLT-2,RDK</item>
+        <item>ETHNIC</item>
+        <item>ROYAL DARK 2</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -54,42 +53,35 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         final itemtype currentMosaic = mMosaicData.get(position);
         Glide.with(mContext).load(currentMosaic.getThumbnail()).into(holder.banner);
         holder.bindTo(currentMosaic);
+        final String item = mMosaicData.get(position).getName();
+
+
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String item = mMosaicData.get(position).getName();
-                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
-              AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                Categories categories  = new Categories();
-                if (item.equals("Natural"))
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+
+                AppCompatActivity activity = (AppCompatActivity)v.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.mTitleText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String item = mMosaicData.get(position).getName();
-                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
+
+
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                Categories categories  = new Categories();
-                if (item.equals("Natural"))
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.banner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String item = mMosaicData.get(position).getName();
-                Toast.makeText(mContext,item,Toast.LENGTH_LONG).show();
+
+
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                Categories categories  = new Categories();
-                if (item.equals("Natural"))
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,categories).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
-
-        //Populate the textviews with data
-
     }
 
 
