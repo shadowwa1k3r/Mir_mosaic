@@ -1,21 +1,12 @@
 package com.odinson.loki.mir_mosaic;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -59,7 +50,7 @@ public class MainActivity extends AppCompatActivity{
     private void ChangeFragment(NavigationFragment value){
         Fragment fragment = null;
         switch (value) {
-            case PRODUCT_LIST:    fragment = product_list.newInstance();tb.setTitle(R.string.item1_title);  break;
+            case PRODUCT_LIST:    fragment = CategoryItems.newInstance();tb.setTitle(R.string.item1_title);  break;
             case QR_SCANNER: fragment = new qr_scanner();tb.setTitle(R.string.item2_title);break;
             case CALCULATOR: fragment= new calculator();tb.setTitle(R.string.item3_title);break;
             case USER: fragment= new user();tb.setTitle(R.string.item4_title);break;

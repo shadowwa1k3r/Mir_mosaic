@@ -85,6 +85,66 @@
         <item>ETHNIC</item>
         <item>ROYAL DARK 2</item>
     </string-array>
+    <string-array name="alaskaItemName">
+        <item>ICICLE</item>
+        <item>GLACIER SPARKLE</item>
+        <item>GLACIER CRACKLE</item>
+        <item>GLACIER BEACH</item>
+        <item>GLACIER PEARL</item>
+        <item>GLACIER STONE</item>
+        <item>ALASKAN HERRING</item>
+        <item>GLACIER BRICK</item>
+        <item>ALASKAN PEARL</item>
+        <item>PEARL ISLAND</item>
+    </string-array>
+    <string-array name="alaskaItemCode">
+        <item>HTC-516-M</item>
+        <item>MOK-013</item>
+        <item>MOK-014</item>
+        <item>MOK-015</item>
+        <item>MOK-016</item>
+        <item>MOK-020</item>
+        <item>ALA-07</item>
+        <item>ALA-08</item>
+        <item>ALA-S10</item>
+        <item>ALA-C11</item>
+    </string-array>
+    <string-array name="alaskaItemCost">
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+    </string-array>
+    <string-array name="alaskaItemMaterial">
+        <item>glass,stone</item>
+        <item>glass,stone</item>
+        <item>glass,ceramics</item>
+        <item>glass,shell</item>
+        <item>glass</item>
+        <item>glass,Bianco Carrara</item>
+        <item>glass</item>
+        <item>glass</item>
+        <item>Thassos/Shell</item>
+        <item>Thassos/Shell</item>
+    </string-array>
+    <string-array name="alaskaItemImg">
+        <item>@drawable/htc516m</item>
+        <item>@drawable/mok013</item>
+        <item>@drawable/mok014</item>
+        <item>@drawable/mok015</item>
+        <item>@drawable/mok016</item>
+        <item>@drawable/mok020</item>
+        <item>@drawable/ala07</item>
+        <item>@drawable/ala08</item>
+        <item>@drawable/alas10</item>
+        <item>@drawable/alac11</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
