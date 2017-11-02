@@ -1,0 +1,372 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/darker_gray">
+             <!-- tools:context="com.odinson.loki.mir_mosaic.ItemInfo"-->
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+       >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/bl01ca"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="ICICLE"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="HTC-516M"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="24sp"/>
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="135$"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="24sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:stretchColumns="0,1">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Product Name:"/>
+
+                                <TextView
+                                    android:id="@+id/itemName"
+                                    android:padding="3dip"
+                                    android:text="ICICLE"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Material:"/>
+
+                                <TextView
+                                    android:id="@+id/itemMaterial"
+                                    android:text="glass,stone"
+                                    android:padding="3dip"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Sold by:"/>
+
+                                <TextView
+                                    android:id="@+id/itemSoldBy"
+                                    android:padding="3dip"
+                                    android:text="sheet"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:stretchColumns="0,1">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Sheet size:"/>
+
+                                <TextView
+                                    android:id="@+id/itemSheetSize"
+                                    android:padding="3dip"
+                                    android:text="11.8x11.8"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Packing:"/>
+
+                                <TextView
+                                    android:id="@+id/itemPacking"
+                                    android:padding="3dip"
+                                    android:text="5 sheets/ctn"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Sq.ft/box:"/>
+
+                                <TextView
+                                    android:id="@+id/itemSqFtBox"
+                                    android:padding="3dip"
+                                    android:text="4.85"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+
+                                    android:padding="3dip"
+                                    android:text="Weight/sheet:"/>
+
+                                <TextView
+                                    android:id="@+id/itemWeightSheet"
+                                    android:padding="3dip"
+                                    android:text="2.6"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            />
+
+                        <Button
+                            android:id="@+id/itemShare"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/background_light"
+                            android:drawableRight="@drawable/share_ico"
+                            android:text="Share"
+                            android:textColor="?attr/textColorAlertDialogListItem"
+                            android:textSize="18sp"/>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            />
+
+                        <Button
+                            android:id="@+id/itemInStore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/roundbutton"
+                            android:text="Availabity in store"
+                            android:textColor="@android:color/background_dark"/>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/itemToCart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectbutton"
+                                android:text=" Add to Cart "
+                                android:textColor="#000000"/>
+
+                            <Button
+                                android:id="@+id/itemOrderSamples"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectbutton"
+
+                                android:text="Order Samples"
+                                android:textColor="#000000"/>
+                        </LinearLayout>
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Calculator"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/itemLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Inter length(ft)"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/itemWidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Inter width(ft)"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Or"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/itemArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Area"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/itemCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/roundbutton2"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:text="Calcuate"/>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>
