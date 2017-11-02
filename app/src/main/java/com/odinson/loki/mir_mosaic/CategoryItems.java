@@ -75,12 +75,14 @@ public class CategoryItems extends Fragment {
         String[] catItemCost = getResources().getStringArray(R.array.alaskaItemCost);
         String[] catItemMaterial = getResources().getStringArray(R.array.alaskaItemMaterial);
         TypedArray catItemImg = getResources().obtainTypedArray(R.array.alaskaItemImg);
+        String[] catItemId = getResources().getStringArray(R.array.alaskaid);
         //String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
         String[] catItemName2 = getResources().getStringArray(R.array.baliItemName);
         String[] catItemCode2 = getResources().getStringArray(R.array.baliItemCode);
         String[] catItemCost2 = getResources().getStringArray(R.array.baliItemCost);
         String[] catItemMaterial2 = getResources().getStringArray(R.array.baliItemMaterial);
         TypedArray catItemImg2 = getResources().obtainTypedArray(R.array.baliItemImg);
+        String[] catItemId2 = getResources().getStringArray(R.array.baliid);
 
         mDataset.clear();
 
@@ -91,11 +93,11 @@ public class CategoryItems extends Fragment {
 
         switch (mSource){
             case "ALASKA": mDataset.clear();for(int i=0;i<catItemCode.length;i++){
-                mDataset.add(new CategoryItemsType(catItemName[i],catItemCode[i],catItemCost[i],catItemMaterial[i],catItemImg.getResourceId(i,0)));}
+                mDataset.add(new CategoryItemsType(catItemId[i],catItemName[i],catItemCode[i],catItemCost[i],catItemMaterial[i],catItemImg.getResourceId(i,0)));}
                 catItemImg.recycle();
                 break;
             case "BALI" : mDataset.clear();for(int i=0;i<catItemCode2.length;i++){
-                mDataset.add(new CategoryItemsType(catItemName2[i],catItemCode2[i],catItemCost2[i],catItemMaterial2[i],catItemImg2.getResourceId(i,0)));}
+                mDataset.add(new CategoryItemsType(catItemId2[i],catItemName2[i],catItemCode2[i],catItemCost2[i],catItemMaterial2[i],catItemImg2.getResourceId(i,0)));}
                 catItemImg2.recycle();
                 break;
 

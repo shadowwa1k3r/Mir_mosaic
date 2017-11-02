@@ -9,10 +9,12 @@ public class CategoryItemsType {
     private String code;
     private String material;
     private String cost;
+    private String id;
     private int img;
 
-    public CategoryItemsType(String name,String code,String cost,String material,int img){
+    public CategoryItemsType(String id,String name,String code,String cost,String material,int img){
         this.name=name;
+        this.id = id;
         this.cost = cost;
         this.code=code;
         this.material=material;
@@ -57,5 +59,14 @@ public class CategoryItemsType {
     public String getCode() {
 
         return code;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+
+        return id;
     }
 }
