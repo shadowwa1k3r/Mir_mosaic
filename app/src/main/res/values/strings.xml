@@ -146,6 +146,139 @@
         <item>@drawable/alac11</item>
     </string-array>
 
+    <string-array name="baliItemName">
+        <item>INDI CARRARA</item>
+        <item>PACIFIC RIM CARRARA</item>
+        <item>MANTRA CARRARA</item>
+        <item>BALINESE CARRARA</item>
+        <item>BATIK CARRARA</item>
+        <item>SUMATRA CARRARA</item>
+        <item>BALIAN CARRARA</item>
+        <item>INDI WOODEN GRAY</item>
+        <item>PACIFIC RIM WOODEN GRAY</item>
+        <item>MANTRA WOODEN GRAY</item>
+        <item>BALINESE WOODEN GRAY</item>
+        <item>BATIK WOODEN GRAY</item>
+        <item>SUMATRA WOODEN GRAY</item>
+        <item>BALIAN WOODEN GRAY</item>
+        <item>INDI CREMA</item>
+        <item>PACIFIC RIM CREMA</item>
+        <item>MANTRA CREMA</item>
+        <item>BALINESE CREMA</item>
+        <item>BATIK CREMA</item>
+        <item>SUMATRA CREMA</item>
+        <item>BALIAN CREMA</item>
+        <item>LEAF CARRARA</item>
+        <item>LEAF WOODEN</item>
+        <item>LEAF CREMA</item>
+
+    </string-array>
+    <string-array name="baliItemCode">
+        <item>BL-01CA</item>
+        <item>BL-02CA</item>
+        <item>BL-03CA</item>
+        <item>BL-04CA</item>
+        <item>BL-05CA</item>
+        <item>BL-06CA</item>
+        <item>BL-O7CA</item>
+        <item>BL-01WG</item>
+        <item>BL-02WG</item>
+        <item>BL-03WG</item>
+        <item>BL-04WG</item>
+        <item>BL-05WG</item>
+        <item>BL-06WG</item>
+        <item>BL-07WG</item>
+        <item>BL-01CM</item>
+        <item>BL-02CM</item>
+        <item>BL-03CM</item>
+        <item>BL-04CM</item>
+        <item>BL-05CM</item>
+        <item>BL-06CM</item>
+        <item>BL-07CM</item>
+        <item>BL-O8CA</item>
+        <item>BL-08WG</item>
+        <item>BL-08CM</item>
+    </string-array>
+    <string-array name="baliItemCost">
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+        <item>__$</item>
+    </string-array>
+    <string-array name="baliItemMaterial">
+        <item>Bianco Carrara</item>
+        <item>Bianco Carrara</item>
+        <item>Bianco Carrara/Glass</item>
+        <item>Bianco Carrara/Glass</item>
+        <item>Glass</item>
+        <item>Bianco Carrara</item>
+        <item>Bianco Carrara</item>
+        <item>Wooden Gray</item>
+        <item>Wooden Gray</item>
+        <item>Wooden Gray/Glass</item>
+        <item>Wooden Gray/Glass</item>
+        <item>Glass</item>
+        <item>Wooden Gray</item>
+        <item>Wooden Gray</item>
+        <item>Crema Marfil</item>
+        <item>Crema Marfil</item>
+        <item>Crema Marfil/Glass</item>
+        <item>Crema Marfil/Glass</item>
+        <item>Glass</item>
+        <item>Crema Marfil</item>
+        <item>Crema Marfil</item>
+        <item>Bianco Carrara</item>
+        <item>Wooden Gray</item>
+        <item>Crema Marfil</item>
+    </string-array>
+    <string-array name="baliItemImg">
+        <item>@drawable/bl01ca</item>
+        <item>@drawable/bl02ca</item>
+        <item>@drawable/bl03ca</item>
+        <item>@drawable/bl04ca</item>
+        <item>@drawable/bl05ca</item>
+        <item>@drawable/bl06ca</item>
+        <item>@drawable/bl07ca</item>
+        <item>@drawable/bl01wg</item>
+        <item>@drawable/bl02wg</item>
+        <item>@drawable/bl03wg</item>
+        <item>@drawable/bl04wg</item>
+        <item>@drawable/bl05wg</item>
+        <item>@drawable/bl06wg</item>
+        <item>@drawable/bl07wg</item>
+        <item>@drawable/bl01cm</item>
+        <item>@drawable/bl02cm</item>
+        <item>@drawable/bl03ca</item>
+        <item>@drawable/bl04cm</item>
+        <item>@drawable/bl05cm</item>
+        <item>@drawable/bl06cm</item>
+        <item>@drawable/bl07cm</item>
+        <item>@drawable/bl08ca</item>
+        <item>@drawable/bl08wg</item>
+        <item>@drawable/bl08cm</item>
+
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

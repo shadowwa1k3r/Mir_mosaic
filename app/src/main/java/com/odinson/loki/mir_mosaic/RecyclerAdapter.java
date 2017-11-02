@@ -1,6 +1,7 @@
 package com.odinson.loki.mir_mosaic;
 
 import android.content.Context;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -61,7 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             public void onClick(View v) {
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN ).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.mTitleText.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +71,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.banner.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +80,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
     }

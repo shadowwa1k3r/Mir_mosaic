@@ -64,6 +64,7 @@ public class ItemList extends Fragment {
         }
         bannerresource.recycle();
 
+
         //Notify the adapter of the change
         mAdapter.notifyDataSetChanged();
     }

@@ -1,6 +1,7 @@
 package com.odinson.loki.mir_mosaic;
 
 import android.content.Context;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -34,12 +35,13 @@ public class RAdapterCategory extends RecyclerView.Adapter<RAdapterCategory.View
     public void onBindViewHolder(RAdapterCategory.ViewH holder, int position) {
         CategoryType currentCategory = mCategoryData.get(position);
         holder.bindTo(currentCategory);
+        final String item = mCategoryData.get(position).getName();
 
         holder.mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,CategoryItems.newInstance()).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,CategoryItems.newInstance(item)).addToBackStack(null).commit();
 
             }
         });

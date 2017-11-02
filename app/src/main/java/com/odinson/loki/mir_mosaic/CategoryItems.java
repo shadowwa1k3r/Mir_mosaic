@@ -18,6 +18,8 @@ public class CategoryItems extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private RACategoryItem mAdapter;
     private ArrayList<CategoryItemsType> mDataset;
+    private static String myparam = "Name";
+    private String mSource;
 
 
 
@@ -25,10 +27,20 @@ public class CategoryItems extends Fragment {
 
 
 
-    public static CategoryItems newInstance() {
+    public static CategoryItems newInstance(String param1) {
         CategoryItems fragment = new CategoryItems();
+        Bundle args = new Bundle();
+        args.putString(myparam,param1);
+        fragment.setArguments(args);
 
         return fragment;
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        if(getArguments()!=null)
+            mSource = getArguments().getString(myparam);
+
     }
 
 
@@ -64,15 +76,30 @@ public class CategoryItems extends Fragment {
         String[] catItemMaterial = getResources().getStringArray(R.array.alaskaItemMaterial);
         TypedArray catItemImg = getResources().obtainTypedArray(R.array.alaskaItemImg);
         //String[] sportsInfo = getResources().getStringArray(R.array.sports_info);
+        String[] catItemName2 = getResources().getStringArray(R.array.baliItemName);
+        String[] catItemCode2 = getResources().getStringArray(R.array.baliItemCode);
+        String[] catItemCost2 = getResources().getStringArray(R.array.baliItemCost);
+        String[] catItemMaterial2 = getResources().getStringArray(R.array.baliItemMaterial);
+        TypedArray catItemImg2 = getResources().obtainTypedArray(R.array.baliItemImg);
 
-        //Clear the existing data (to avoid duplication)
         mDataset.clear();
 
+        //Clear the existing data (to avoid duplication)
+
+
         //Create the ArrayList of Sports objects with the titles and information about each sport
-        for(int i=0;i<catItemCode.length;i++){
-            mDataset.add(new CategoryItemsType(catItemName[i],catItemCode[i],catItemCost[i],catItemMaterial[i],catItemImg.getResourceId(i,0)));
+
+        switch (mSource){
+            case "ALASKA": mDataset.clear();for(int i=0;i<catItemCode.length;i++){
+                mDataset.add(new CategoryItemsType(catItemName[i],catItemCode[i],catItemCost[i],catItemMaterial[i],catItemImg.getResourceId(i,0)));}
+                catItemImg.recycle();
+                break;
+            case "BALI" : mDataset.clear();for(int i=0;i<catItemCode2.length;i++){
+                mDataset.add(new CategoryItemsType(catItemName2[i],catItemCode2[i],catItemCost2[i],catItemMaterial2[i],catItemImg2.getResourceId(i,0)));}
+                catItemImg2.recycle();
+                break;
+
         }
-        catItemImg.recycle();
 
         //Notify the adapter of the change
         mAdapter.notifyDataSetChanged();
