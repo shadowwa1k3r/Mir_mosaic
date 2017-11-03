@@ -1,16 +1,14 @@
 package com.odinson.loki.mir_mosaic;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +24,8 @@ public class product_list extends Fragment {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Toolbar tb;
+    private ActionBar ab;
 
     public static product_list newInstance(){
         product_list itemOnFragment = new product_list();
@@ -40,6 +40,8 @@ public class product_list extends Fragment {
 
         viewPager = (ViewPager)plist.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
         tabLayout = (TabLayout)plist.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 

@@ -8,69 +8,74 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginBottom="5dp"
+                                    android:clickable="true"
                                     card_view:cardCornerRadius="5dp"
                                     card_view:cardElevation="5dp"
-                                    card_view:contentPadding="10dp"
-                                    android:clickable="true">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/card_img"
-        android:id="@+id/catItem"/>
+                                    card_view:contentPadding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/catCode"
+        <ImageView
+            android:id="@+id/catItem"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/card_img"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="HTC-516M"
-            android:textSize="10sp"/>
+            android:gravity="bottom"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/catCost"
+            <TextView
+                android:id="@+id/catCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="HTC-516M"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/catCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="356$"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="356$"
-            android:textSize="10sp"/>
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/catName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="ICICLE"
+                android:textSize="8sp"/>
+
+            <TextView
+                android:id="@+id/catMat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="glass,stone"
+                android:textSize="8sp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/catName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="ICICLE"
-            android:textSize="8sp"/>
-
-        <TextView
-            android:id="@+id/catMat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="glass,stone"
-            android:textSize="8sp"/>
-
-    </LinearLayout>
-
-</LinearLayout>
 
 </android.support.v7.widget.CardView>

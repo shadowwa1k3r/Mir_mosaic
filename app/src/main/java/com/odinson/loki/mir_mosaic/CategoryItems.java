@@ -3,11 +3,15 @@ package com.odinson.loki.mir_mosaic;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -40,7 +44,21 @@ public class CategoryItems extends Fragment {
         super.onCreate(savedInstanceState);
         if(getArguments()!=null)
             mSource = getArguments().getString(myparam);
+        setHasOptionsMenu(true);
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                fm.popBackStack();
+
+                //Toast.makeText(getContext(),"asd",Toast.LENGTH_LONG).show();
+                return true;
+
+        }
+        return false;
     }
 
 
@@ -56,10 +74,13 @@ public class CategoryItems extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         mDataset = new ArrayList<CategoryItemsType>();
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mAdapter = new RACategoryItem(getActivity(),mDataset);
 
         mRecyclerView.setAdapter(mAdapter);
+        //TextView tt = (TextView)catIteL.findViewById(R.id.subtite);
+        //tt.setText(mSource);
 
         initializeData();
 
@@ -85,6 +106,10 @@ public class CategoryItems extends Fragment {
         String[] catItemId2 = getResources().getStringArray(R.array.baliid);
 
         mDataset.clear();
+        TextView st= (TextView)getActivity().findViewById(R.id.subtite);
+        TextView tt= (TextView)getActivity().findViewById(R.id.tite);
+        st.setText(mSource);
+        tt.setText("MirMosaic");
 
         //Clear the existing data (to avoid duplication)
 

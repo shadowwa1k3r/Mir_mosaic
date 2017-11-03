@@ -3,10 +3,14 @@ package com.odinson.loki.mir_mosaic;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -29,12 +33,26 @@ public class ItemInfo extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                fm.popBackStack();
+
+                //Toast.makeText(getContext(),"asd",Toast.LENGTH_LONG).show();
+                return true;
+
+        }
+        return false;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         if (getArguments()!=null)
             mSource=getArguments().getString(mykey);
+        setHasOptionsMenu(true);
     }
 
 
@@ -45,7 +63,23 @@ public class ItemInfo extends Fragment {
         View itemInfo = inflater.inflate(R.layout.fragment_item_info, container, false);
         // Inflate the layout for this fragment
 
-        String[] catItemName = getResources().getStringArray(R.array.alaskaItemName);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+        initData(itemInfo);
+
+
+
+
+
+
+        return itemInfo;
+    }
+
+    public void initData(View itemInfo){
+
+         String[] catItemName = getResources().getStringArray(R.array.alaskaItemName);
         String[] catItemCode = getResources().getStringArray(R.array.alaskaItemCode);
         String[] catItemCost = getResources().getStringArray(R.array.alaskaItemCost);
         String[] catItemMaterial = getResources().getStringArray(R.array.alaskaItemMaterial);
@@ -61,24 +95,41 @@ public class ItemInfo extends Fragment {
 
 
         ImageView itemImg = (ImageView)itemInfo.findViewById(R.id.itemImg);
-        String[][] s = new String[1][];
-        s[0][] = getResources().getStringArray(R.array.alaskaItemCode);
+        TextView itemcode = (TextView)itemInfo.findViewById(R.id.itemCode);
+        TextView itemname = (TextView)itemInfo.findViewById(R.id.itemName);
+        TextView itemnamee = (TextView)itemInfo.findViewById(R.id.itemNamee);
+        TextView itemmaterial = (TextView)itemInfo.findViewById(R.id.itemMaterial);
+        TextView itemcost = (TextView)itemInfo.findViewById(R.id.itemCost);
 
+        TextView tt= (TextView)getActivity().findViewById(R.id.tite);
+        TextView st= (TextView)getActivity().findViewById(R.id.subtite);
+        st.setText("");
+        tt.setText(mSource);
 
-        for(int i=0;i<s.length;i++) {
-            if (s[i].equals(mSource)) {
+        for(int i=0;i<catItemCode.length;i++) {
+            if (catItemName[i].equals(mSource)) {
                 Glide.with(getActivity()).load(catItemImg.getResourceId(i,0)).into(itemImg);
-
-
+                itemcode.setText(catItemCode[i]);
+                itemname.setText(catItemName[i]);
+                itemmaterial.setText(catItemMaterial[i]);
+                itemcost.setText(catItemCost[i]);
+                break;
             }
         }
+        for (int i=0;i<catItemCode2.length;i++){
+            if(catItemName2[i].equals(mSource)){
+                Glide.with(getActivity()).load(catItemImg2.getResourceId(i,0)).into(itemImg);
+                itemcode.setText(catItemCode2[i]);
+                itemname.setText(catItemName2[i]);
+                itemmaterial.setText(catItemMaterial2[i]);
+                itemcost.setText(catItemCost2[i]);
+                break;
+            }
+        }
+        itemnamee.setText(itemname.getText());
         catItemImg.recycle();
         catItemImg2.recycle();
 
-
-
-
-        return itemInfo;
     }
 
     private String[] concat(String[] A, String[] B) {

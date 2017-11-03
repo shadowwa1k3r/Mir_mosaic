@@ -37,9 +37,9 @@ public class RACategoryItem extends RecyclerView.Adapter<RACategoryItem.ViewHD> 
     @Override
     public void onBindViewHolder(final RACategoryItem.ViewHD holder,final int position){
         final CategoryItemsType currentCitem=mData.get(position);
-        Glide.with(mContext).load(currentCitem.getImg()).into(holder.mImage);
+        Glide.with(mContext).load(currentCitem.getImg()).centerCrop().into(holder.mImage);
         holder.bindTo(currentCitem);
-        final String item = mData.get(position).getCode();
+        final String item = mData.get(position).getName();
         holder.mImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,7 +21,7 @@
         <ImageView
             android:id="@+id/itemImg"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/bl01ca"/>
 
@@ -45,7 +45,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/itemNamee"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

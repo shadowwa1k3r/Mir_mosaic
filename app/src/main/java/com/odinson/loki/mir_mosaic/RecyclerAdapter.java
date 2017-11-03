@@ -52,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void onBindViewHolder(final RecyclerAdapter.ViewHolder holder, final int position) {
         //Get current sport
         final itemtype currentMosaic = mMosaicData.get(position);
-        Glide.with(mContext).load(currentMosaic.getThumbnail()).into(holder.banner);
+        Glide.with(mContext).load(currentMosaic.getThumbnail()).centerCrop().into(holder.banner);
         holder.bindTo(currentMosaic);
         final String item = mMosaicData.get(position).getName();
 

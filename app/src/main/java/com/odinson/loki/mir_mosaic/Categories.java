@@ -2,11 +2,15 @@ package com.odinson.loki.mir_mosaic;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +24,7 @@ public class Categories extends Fragment {
     private ArrayList<CategoryType> mDataset;
     private static String myparam="Name";
     private String sSource;
+    TextView st;
 
 
 
@@ -36,7 +41,22 @@ public class Categories extends Fragment {
         super.onCreate(savedInstanceState);
         if(getArguments()!=null)
             sSource=getArguments().getString(myparam);
+        setHasOptionsMenu(true);
 
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                fm.popBackStack();
+
+                //Toast.makeText(getContext(),"asd",Toast.LENGTH_LONG).show();
+                return true;
+
+        }
+        return false;
     }
 
 
@@ -50,6 +70,9 @@ public class Categories extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
         mDataset = new ArrayList<CategoryType>();
         mRAdapterCategory = new RAdapterCategory(getActivity(),mDataset);
@@ -67,6 +90,12 @@ public class Categories extends Fragment {
         mDataset.clear();
 
         Toast.makeText(getContext(),sSource,Toast.LENGTH_LONG).show();
+
+        st= (TextView)getActivity().findViewById(R.id.subtite);
+        st.setText(sSource);
+        TextView tt= (TextView)getActivity().findViewById(R.id.tite);
+        tt.setText("MirMosaic");
+
 
         switch (sSource){
             case "Natural": mDataset.clear();for (int i=0; i<categoryList1.length;i++){
