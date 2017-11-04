@@ -2,14 +2,12 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.odinson.loki.mir_mosaic.Categories">
+             tools:context="com.odinson.loki.mir_mosaic.AboutInstallation">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/my_recycler_view_categories"
-        android:scrollbars="vertical"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:text="@string/hello_blank_fragment"/>
 
 </FrameLayout>

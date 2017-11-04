@@ -1,7 +1,6 @@
 package com.odinson.loki.mir_mosaic;
 
 import android.content.Context;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -44,7 +43,7 @@ public class RACategoryItem extends RecyclerView.Adapter<RACategoryItem.ViewHD> 
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,ItemInfo.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_up,R.anim.slide_down,R.anim.slide_up,R.anim.slide_down).replace(R.id.content,ItemInfo.newInstance(item)).addToBackStack(null).commit();
             }
         });
 

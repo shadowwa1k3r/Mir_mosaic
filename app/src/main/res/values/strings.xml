@@ -185,6 +185,16 @@
         <item>LEAF CREMA</item>
 
     </string-array>
+    <string name="sample">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue elit, aliquet ut elementum eget, fermentum non massa. Donec nec sem nec arcu sagittis porta. Integer tincidunt placerat pellentesque. Vestibulum consectetur commodo mollis. Vivamus vel justo et nisl pulvinar bibendum. Nullam sit amet sapien vel nulla varius aliquet in nec est. Praesent sed enim at nulla maximus scelerisque nec in nisi. Etiam vestibulum, nisl in mollis sagittis, purus nunc auctor tellus, eu ultrices arcu nunc vel nulla. Vivamus et tortor eu dolor pellentesque aliquam sit amet a ligula.
+
+Aenean quis consequat ipsum. Vivamus bibendum fermentum odio, nec malesuada massa venenatis vel. Curabitur at euismod mi. Praesent eu egestas elit. Etiam in elementum nisl, at facilisis ex. Sed eget elementum sapien. Integer et ultrices ipsum. Cras euismod justo sed dolor elementum tempus. Nulla nisi ipsum, sagittis sit amet ante sagittis, finibus efficitur justo. In vel tincidunt tellus.
+
+Praesent iaculis ullamcorper laoreet. Vivamus convallis varius ex ornare commodo. Proin lectus odio, aliquet quis aliquet vitae, pretium a arcu. Pellentesque quam quam, gravida sed efficitur a, facilisis laoreet lorem. Sed scelerisque ullamcorper elementum. Pellentesque dui felis, convallis eu auctor non, ultricies in orci. Nullam tristique nisl nisl. Sed viverra et lacus vel eleifend.
+
+Proin ac risus felis. Nam interdum odio sapien, sed dapibus justo sagittis vel. Donec eu eros felis. Nam at diam congue, convallis lectus a, feugiat augue. Nam non volutpat velit, sed elementum enim. In et arcu feugiat, pharetra ligula sit amet, volutpat ligula. Morbi euismod, erat ac volutpat auctor, mi nibh auctor arcu, a volutpat felis felis sit amet justo. Mauris tempor augue eget enim ullamcorper, at lobortis metus commodo. Fusce pharetra efficitur tortor. Fusce a pulvinar ante.
+
+Vestibulum euismod velit quis malesuada tincidunt. Nam sodales nunc eros, vel posuere libero imperdiet id. Aliquam sodales facilisis auctor. Mauris vestibulum metus nibh, in cursus orci auctor sed. Etiam ut porttitor dolor. Pellentesque felis enim, maximus ultrices iaculis vel, iaculis id est. Nullam facilisis ornare ex, aliquam iaculis diam finibus sit amet. Sed interdum, arcu eget sollicitudin convallis, lorem eros feugiat est, fermentum imperdiet ipsum nisi id ex. Pellentesque in diam pulvinar, egestas neque et, feugiat ipsum. Sed ex odio, malesuada id finibus eu, facilisis rhoncus diam. Nunc pretium massa non mauris sollicitudin, id rutrum mi faucibus. Praesent eros tellus, commodo a sem vehicula, porta sodales justo. Suspendisse non mollis felis, sed luctus justo. Sed congue dui ac nulla pellentesque rhoncus. Nunc sagittis auctor ipsum. Praesent hendrerit magna tellus, eget tempus dolor dapibus nec.</string>
+    <string name="simple_fragment_transition">item</string>
     <string-array name="baliid">
         <item>0</item>
         <item>1</item>

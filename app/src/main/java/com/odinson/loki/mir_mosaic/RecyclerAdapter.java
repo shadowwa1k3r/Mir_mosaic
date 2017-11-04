@@ -1,7 +1,6 @@
 package com.odinson.loki.mir_mosaic;
 
 import android.content.Context;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -57,12 +56,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         final String item = mMosaicData.get(position).getName();
 
 
+
         holder.cv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN ).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.mTitleText.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.banner.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
     }
@@ -106,6 +106,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         private ImageView banner;
         private CardView cv;
 
+
+
         /**
          * Constructor for the ViewHolder, used in onCreateViewHolder().
          * @param itemView The rootview of the list_item.xml layout file
@@ -119,6 +121,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             //Initialize the views
             mTitleText = (TextView)itemView.findViewById(R.id.title);
             banner = (ImageView)itemView.findViewById(R.id.thumbnail);
+           // banner.setColorFilter(Color.parseColor("#aeaeae"), PorterDuff.Mode.MULTIPLY);
 
         }
 

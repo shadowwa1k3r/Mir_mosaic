@@ -2,6 +2,7 @@ package com.odinson.loki.mir_mosaic;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,6 +48,16 @@ public class ItemList extends Fragment {
         initializeData();;
 
         return il;
+    }
+    @Override
+    public void  onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        super.onViewCreated(view,savedInstanceState);
+
+
+
+
+
+
     }
 
     private void initializeData() {

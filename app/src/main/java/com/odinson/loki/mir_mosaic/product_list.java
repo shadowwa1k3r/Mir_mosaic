@@ -1,5 +1,6 @@
 package com.odinson.loki.mir_mosaic;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,7 @@ public class product_list extends Fragment {
     private Toolbar tb;
     private ActionBar ab;
 
+
     public static product_list newInstance(){
         product_list itemOnFragment = new product_list();
         return itemOnFragment;
@@ -38,11 +40,15 @@ public class product_list extends Fragment {
 
         View plist = inflater.inflate(R.layout.fragment_product_list,container,false);
 
+
         viewPager = (ViewPager)plist.findViewById(R.id.viewpager);
         setupViewPager(viewPager);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         tabLayout = (TabLayout)plist.findViewById(R.id.tabs);
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#1c313a"));
+        tabLayout.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
+        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#000a12"));
         tabLayout.setupWithViewPager(viewPager);
 
         return plist;

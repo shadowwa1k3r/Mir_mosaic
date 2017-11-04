@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -65,14 +64,32 @@ public class MainActivity extends AppCompatActivity{
             case USER: fragment= new user();st.setText("User");tt.setText("MirMosaic");break;
             case ABOUT: fragment= new about();st.setText("About");tt.setText("MirMosaic");break;
         }
+
         if(fragment!=null)
             getSupportFragmentManager()
                     .beginTransaction()
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .setCustomAnimations(R.anim.grow_from_middle,R.anim.shrink_to_middle)
                     .replace(R.id.content, fragment)
                     .commit();
 
     }
+
+    /*private void flipcard(Fragment fragment){
+        Boolean mShowingBack =false;
+        if (mShowingBack){
+            getSupportFragmentManager().popBackStack();
+            return;
+        }
+        mShowingBack = true;
+
+        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.animator.flip_right_in,R.animator.flip_tight_out,R.animator.flip_left_in,R.animator.flip_left_out)
+                .replace(R.id.content,fragment)
+                .addToBackStack(null)
+                .commit();
+
+
+    }*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -9,7 +9,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <android.support.design.widget.AppBarLayout
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="25dp"
         tools:layout_editor_absoluteX="8dp">
@@ -17,6 +17,7 @@
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabMode="fixed"
