@@ -68,7 +68,7 @@ public class about extends Fragment {
         mvpadapter.addFragment(new AboutUs(),"ABOUT US");
         mvpadapter.addFragment(new AboutGallery(),"GALLERY");
         mvpadapter.addFragment(new AboutCatalog(),"CATALOG");
-        mvpadapter.addFragment(new AboutGallery(),"INSTALLATION");
+        mvpadapter.addFragment(new AboutGallery(),"GUIDELINE");
         viewPager.setAdapter(mvpadapter);
 
     }

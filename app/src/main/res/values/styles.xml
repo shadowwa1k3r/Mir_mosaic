@@ -21,6 +21,10 @@
         <item name="colorControlNormal">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
     </style>
+    <style name="myCheckbox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#cfcfcf</item>
+        <item name="colorControlActivated">#cfcfcf</item>
+    </style>
 
 
 </resources>

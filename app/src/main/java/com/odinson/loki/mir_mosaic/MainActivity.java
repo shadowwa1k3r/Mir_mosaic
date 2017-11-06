@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity{
     private void ChangeFragment(NavigationFragment value){
         Fragment fragment = null;
         switch (value) {
-            case PRODUCT_LIST:    fragment = product_list.newInstance();st.setText("Product List");tt.setText("MirMosaic");  break;
-            case QR_SCANNER: fragment = new qr_scanner();st.setText("QR Scanner");tt.setText("MirMosaic");break;
-            case CALCULATOR: fragment= new calculator();st.setText("Calculator");tt.setText("MirMosaic");break;
-            case USER: fragment= new user();st.setText("User");tt.setText("MirMosaic");break;
-            case ABOUT: fragment= new about();st.setText("About");tt.setText("MirMosaic");break;
+            case PRODUCT_LIST:    fragment = product_list.newInstance();tt.setText("Product List");;  break;
+            case QR_SCANNER: fragment = new qr_scanner();tt.setText("QR Scanner");;break;
+            case CALCULATOR: fragment= new calculator();tt.setText("Calculator");;break;
+            case USER: fragment= new user();tt.setText("User");break;
+            case ABOUT: fragment= new about();tt.setText("About");break;
         }
 
         if(fragment!=null)
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity{
         tb=(Toolbar)findViewById(R.id.toolbar_actionbar);
         tb.setTitle("");
         tt= (TextView)findViewById(R.id.tite);
-        st =(TextView)findViewById(R.id.subtite);
+        //st =(TextView)findViewById(R.id.subtite);
         tt.setText("MirMosaic");
 
 

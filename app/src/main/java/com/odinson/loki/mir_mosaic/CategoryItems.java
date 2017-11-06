@@ -108,8 +108,8 @@ public class CategoryItems extends Fragment {
         mDataset.clear();
         TextView st= (TextView)getActivity().findViewById(R.id.subtite);
         TextView tt= (TextView)getActivity().findViewById(R.id.tite);
-        st.setText(mSource);
-        tt.setText("MirMosaic");
+        tt.setText(mSource);
+        //tt.setText("MirMosaic");
 
         //Clear the existing data (to avoid duplication)
 

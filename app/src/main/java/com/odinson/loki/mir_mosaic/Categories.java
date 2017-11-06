@@ -81,8 +81,13 @@ public class Categories extends Fragment {
         mRecyclerView.setAdapter(mRAdapterCategory);
         initializeData();
 
+
         return categories;
     }
+
+
+
+
     public void initializeData(){
         String[] categoryList1 =getResources().getStringArray(R.array.Natural);
         String[] categoryList2 =getResources().getStringArray(R.array.Skalini);
@@ -93,9 +98,9 @@ public class Categories extends Fragment {
         Toast.makeText(getContext(),sSource,Toast.LENGTH_LONG).show();
 
         st= (TextView)getActivity().findViewById(R.id.subtite);
-        st.setText(sSource);
+        //st.setText(sSource);
         TextView tt= (TextView)getActivity().findViewById(R.id.tite);
-        tt.setText("MirMosaic");
+        tt.setText(sSource);
 
 
         switch (sSource){

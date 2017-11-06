@@ -62,7 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             public void onClick(View v) {
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enterfromright,R.anim.exittoleft,R.anim.enterfromleft,R.anim.exittoright).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.mTitleText.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +71,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enterfromright,R.anim.exittoleft,R.anim.enterfromleft,R.anim.exittoright).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
         holder.banner.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enterfromright,R.anim.exittoleft,R.anim.enterfromleft,R.anim.exittoright).replace(R.id.content,Categories.newInstance(item)).addToBackStack(null).commit();
             }
         });
     }

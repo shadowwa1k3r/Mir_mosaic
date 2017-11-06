@@ -40,7 +40,7 @@ public class RAdapterCategory extends RecyclerView.Adapter<RAdapterCategory.View
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_in_left,R.anim.slide_in_right,R.anim.slide_in_left,R.anim.slide_in_right).replace(R.id.content,CategoryItems.newInstance(item)).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enterfromright,R.anim.exittoleft,R.anim.enterfromleft,R.anim.exittoright).replace(R.id.content,CategoryItems.newInstance(item)).addToBackStack(null).commit();
 
             }
         });
