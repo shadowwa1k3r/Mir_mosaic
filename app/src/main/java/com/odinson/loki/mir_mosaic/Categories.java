@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -95,7 +94,7 @@ public class Categories extends Fragment {
         String[] categoryList4 =getResources().getStringArray(R.array.Closeouts);
         mDataset.clear();
 
-        Toast.makeText(getContext(),sSource,Toast.LENGTH_LONG).show();
+       // Toast.makeText(getContext(),sSource,Toast.LENGTH_SHORT).show();
 
         st= (TextView)getActivity().findViewById(R.id.subtite);
         //st.setText(sSource);

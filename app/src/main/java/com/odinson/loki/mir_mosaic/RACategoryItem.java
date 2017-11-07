@@ -45,7 +45,7 @@ public class RACategoryItem extends RecyclerView.Adapter<RACategoryItem.ViewHD> 
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
                 activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_up,R.anim.slide_down,R.anim.slide_up,R.anim.slide_down).replace(R.id.content,ItemInfo.newInstance(item)).addToBackStack(null).commit();
             }
-        });
+        });//to item info page -->
 
     }
 
@@ -71,6 +71,7 @@ public class RACategoryItem extends RecyclerView.Adapter<RACategoryItem.ViewHD> 
             mCost = (TextView)itemview.findViewById(R.id.catCost);
             mMaterial = (TextView)itemview.findViewById(R.id.catMat);
             mImage = (ImageView)itemview.findViewById(R.id.catItem);
+
         }
 
         void bindTo(CategoryItemsType current){
